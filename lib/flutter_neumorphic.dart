@@ -41,7 +41,7 @@ export 'package:flutter/material.dart';
 
 class GlobalNeumorphicSettings {
   static double rectRadius = 10;
-  static NeumorphicStyle neumorphicStyle = neumorphicStyle = NeumorphicStyle(
+  static NeumorphicStyle neumorphicStyle = NeumorphicStyle(
     lightSource: LightSource(-0.5, -2),
     shape: NeumorphicShape.convex,
     intensity: 0.5,
