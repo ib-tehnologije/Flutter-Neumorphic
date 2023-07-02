@@ -1,6 +1,6 @@
 
 /*
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic/flutter_neu.dart';
 
 void main() {
   test('adds one to input values', () {

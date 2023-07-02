@@ -6,7 +6,7 @@ A complete, ready to use, Neumorphic ui kit for Flutter
 
 Try Flutter-Neumorphic on your browser : 👉 https://flutter-neumorphic.firebaseapp.com/ 🌐
 
-[![neumorphic_playground](./medias/playground.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neu_playground](./medias/playground.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 # ⚙️ Installation
 
@@ -26,7 +26,7 @@ dependencies:
 
 The in your .dart files 
 ```dart
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic/flutter_neu.dart';
 ```
 
 # 🗂 Widgets
@@ -145,8 +145,8 @@ Neumorphic(
 )
 ```
 
-[![Neumorphic](./medias/neumorphic_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/neumorphic_circle_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](./medias/neu_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](./medias/neu_circle_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 ☝️ Playing with LightSource & Depth
 
@@ -243,7 +243,7 @@ child: NeumorphicText(
 
 ## Neumorphic Icon
 
-[![custom_shape](./medias/neumorphic_icon.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![custom_shape](./medias/neu_icon.png)](https://github.com/Idean/Flutter-Neumorphic)
 
 ```dart
 child: NeumorphicIcon(
@@ -341,8 +341,8 @@ Note that `borderColor` and `borderWidth` default values has been added to `Neum
 ## 🎨 Neumorphic Theme
 
 
-[![neumorphic_theme](./medias/toggleDark.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![neumorphic_theme](./medias/toggleTheme.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neu_theme](./medias/toggleDark.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neu_theme](./medias/toggleTheme.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 ```dart
 NeumorphicTheme(
@@ -431,7 +431,7 @@ A Modern / Material (upgraded) card usually is a surface floating on top of our 
 
 Neumorphic card however pretends to extrude from the background. It’s a raised shape made from the exact same material as the background. When we look at it from the side we see that it doesn’t “float”.
 
-[![neumorphic_button](./medias/button_press.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neu_button](./medias/button_press.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 Here's a Nereumorphic Button tap (slowed x2) from the sample app, you can see how the element seems to change its depth to its surface.
 
