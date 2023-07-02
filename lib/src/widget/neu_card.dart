@@ -45,7 +45,7 @@ Widget _renderMainCard(BuildContext context, MaterialColor color,
   );
 }
 
-class NeumorphicCard extends StatelessWidget {
+class NeuCard extends StatelessWidget {
   final Widget child;
   final Function()? onTap;
   final Function()? onDelete;
@@ -55,7 +55,7 @@ class NeumorphicCard extends StatelessWidget {
   final double? allInnerPadding;
   final EdgeInsets edgeInsets;
 
-  const NeumorphicCard(
+  const NeuCard(
       {Key? key,
       required this.child,
       this.onTap,
