@@ -1,5 +1,7 @@
 library flutter_neumorphic;
 
+import 'flutter_neumorphic.dart';
+
 export 'package:flutter/material.dart'
     show
         TextTheme,
@@ -36,3 +38,18 @@ export 'src/widget/toggle.dart';
 export 'src/widget/floating_action_button.dart';
 
 export 'package:flutter/material.dart';
+
+class GlobalNeumorphicSettings {
+  static double rectRadius = 10;
+  static NeumorphicStyle neumorphicStyle = neumorphicStyle = NeumorphicStyle(
+    lightSource: LightSource(-0.5, -2),
+    shape: NeumorphicShape.convex,
+    intensity: 0.5,
+    surfaceIntensity: 0.135,
+    shadowLightColor: Colors.transparent,
+  );
+  static ShapeBorder rectShape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(
+    Radius.circular(rectRadius),
+  ));
+}
