@@ -84,6 +84,9 @@ class NeuCard extends StatelessWidget {
       ),
       padding: outerPadding ?? 0,
       innerPadding: innerPadding ?? 0,
+      onDelete: onDelete,
+      onDeleteName: onDeleteName,
+      neumorphicStyle: neumorphicStyle
     );
   }
 }
