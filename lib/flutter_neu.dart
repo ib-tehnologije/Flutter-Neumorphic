@@ -45,6 +45,7 @@ export 'src/widget/neu_switch.dart';
 export 'src/widget/neu_text.dart';
 export 'src/widget/neu_toggle.dart';
 export 'src/widget/neu_floating_action_button.dart';
+export 'src/extensions/neu_color_extensions.dart';
 
 export 'package:flutter/material.dart';
 
