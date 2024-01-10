@@ -46,7 +46,7 @@ export 'package:flutter/services.dart' show SmartQuotesType, SmartDashesType;
 ///
 /// Creates a [TextFormField] with an [InputDecoration] and validator function.
 ///
-/// ![If the user enters valid text, the OnixTextField appears normally without any warnings to the user](https://flutter.github.io/assets-for-api-docs/assets/material/text_form_field.png)
+/// ![If the user enters valid text, the NeuTextFormField appears normally without any warnings to the user](https://flutter.github.io/assets-for-api-docs/assets/material/text_form_field.png)
 ///
 /// ![If the user enters invalid text, the error message returned from the validator function is displayed in dark red underneath the input](https://flutter.github.io/assets-for-api-docs/assets/material/text_form_field_error.png)
 ///
@@ -83,7 +83,7 @@ export 'package:flutter/services.dart' show SmartQuotesType, SmartDashesType;
 ///  * [InputDecorator], which shows the labels and other visual elements that
 ///    surround the actual text editing widget.
 ///  * Learn how to use a [TextEditingController] in one of our [cookbook recipes](https://flutter.dev/docs/cookbook/forms/text-field-changes#2-use-a-texteditingcontroller).
-class OnixTextFormField extends FormField<String> {
+class NeuTextFormField extends FormField<String> {
   /// Creates a [FormField] that contains a [TextField].
   ///
   /// When a [controller] is specified, [initialValue] must be null (the
@@ -92,8 +92,8 @@ class OnixTextFormField extends FormField<String> {
   /// to [initialValue] or the empty string.
   ///
   /// For documentation about the various parameters, see the [TextField] class
-  /// and [new OnixTextField], the constructor.
-  OnixTextFormField({
+  /// and [new NeuTextFormField], the constructor.
+  NeuTextFormField({
     Key? key,
     this.controller,
     String? initialValue,
@@ -182,8 +182,8 @@ class OnixTextFormField extends FormField<String> {
           enabled: enabled ?? decoration?.enabled ?? true,
           autovalidateMode: autovalidateMode ?? AutovalidateMode.disabled,
           builder: (FormFieldState<String> field) {
-            final _OnixTextFormFieldState state =
-                field as _OnixTextFormFieldState;
+            final _NeuTextFormFieldState state =
+                field as _NeuTextFormFieldState;
             final InputDecoration effectiveDecoration = (decoration ??
                     const InputDecoration())
                 .applyDefaults(Theme.of(field.context).inputDecorationTheme);
@@ -369,16 +369,16 @@ class OnixTextFormField extends FormField<String> {
   final TextEditingController? controller;
 
   @override
-  FormFieldState<String> createState() => _OnixTextFormFieldState();
+  FormFieldState<String> createState() => _NeuTextFormFieldState();
 }
 
-class _OnixTextFormFieldState extends FormFieldState<String> {
+class _NeuTextFormFieldState extends FormFieldState<String> {
   RestorableTextEditingController? _controller;
 
   TextEditingController get _effectiveController =>
       _textFormField.controller ?? _controller!.value;
 
-  OnixTextFormField get _textFormField => super.widget as OnixTextFormField;
+  NeuTextFormField get _textFormField => super.widget as NeuTextFormField;
 
   @override
   void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
@@ -419,7 +419,7 @@ class _OnixTextFormFieldState extends FormFieldState<String> {
   }
 
   @override
-  void didUpdateWidget(OnixTextFormField oldWidget) {
+  void didUpdateWidget(NeuTextFormField oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (_textFormField.controller != oldWidget.controller) {
       oldWidget.controller?.removeListener(_handleControllerChanged);
