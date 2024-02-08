@@ -18,7 +18,6 @@ Widget _renderMainCard(BuildContext context, MaterialColor color,
       drawSurfaceAboveChild: false,
       style: (neumorphicStyle ?? GlobalNeuSettings.neumorphicStyle).copyWith(
           color: color,
-          // border: NeumorphicBorder(color: orange, width: 3, isEnabled: true),
           surfaceIntensity: 0.5,
           boxShape: NeuBoxShape.roundRect(BorderRadius.circular(10))),
       child: NeuDeletable(

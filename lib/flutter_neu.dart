@@ -14,8 +14,6 @@ export 'package:flutter/material.dart'
         InitialRouteListFactory;
 export 'package:flutter/widgets.dart';
 
-export 'src/neu_colors.dart';
-export 'src/neu_box_shape.dart';
 export 'src/shape/neu_path_provider.dart';
 export 'src/theme/neu_app_bar.dart';
 export 'src/theme/neu_theme.dart';
@@ -46,6 +44,10 @@ export 'src/widget/neu_text.dart';
 export 'src/widget/neu_toggle.dart';
 export 'src/widget/neu_floating_action_button.dart';
 export 'src/extensions/neu_color_extensions.dart';
+export 'src/neu_shape.dart';
+export 'src/neu_light_source.dart';
+export 'src/neu_colors.dart';
+export 'src/neu_box_shape.dart';
 
 export 'package:flutter/material.dart';
 
