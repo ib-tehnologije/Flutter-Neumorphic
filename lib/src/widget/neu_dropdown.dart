@@ -33,16 +33,32 @@ class NeuDropdown<T> extends StatelessWidget {
             color: Colors.white,
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: value == null
+                ? EdgeInsets.symmetric(horizontal: 10)
+                : EdgeInsets.only(left: 10),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<T>(
                 padding: EdgeInsets.only(top: 5),
                 value: value,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius:
+                    BorderRadius.circular(GlobalNeuSettings.rectRadius),
                 hint: value == null ? Text(placeholder) : null,
                 items: items,
                 isExpanded: true,
-                onChanged: onChanged, // Make sure to pass the onChanged callback
+                icon: value == null
+                    ? null
+                    : IconButton(
+                        padding: EdgeInsets.zero,
+                        icon: Icon(
+                          Icons.clear,
+                          color: Colors.red,
+                        ),
+                        onPressed: () {
+                          onChanged(null);
+                        },
+                      ),
+                onChanged:
+                    onChanged, // Make sure to pass the onChanged callback
                 // Add any other DropdownButton customizations here
               ),
             ),
