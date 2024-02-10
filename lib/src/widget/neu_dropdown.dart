@@ -34,6 +34,7 @@ class NeuDropdown<T> extends StatelessWidget {
           ),
           child: DropdownButtonHideUnderline(
             child: DropdownButton<T>(
+              padding: EdgeInsets.only(top: 5),
               value: value,
               borderRadius: BorderRadius.circular(10),
               hint: value == null ? Text(placeholder) : null,
