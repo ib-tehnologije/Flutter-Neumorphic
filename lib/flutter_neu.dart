@@ -48,6 +48,7 @@ export 'src/neu_shape.dart';
 export 'src/neu_light_source.dart';
 export 'src/neu_colors.dart';
 export 'src/neu_box_shape.dart';
+export 'src/widget/neu_dropdown.dart';
 
 export 'package:flutter/material.dart';
 
