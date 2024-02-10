@@ -25,8 +25,8 @@ class NeuDropdown<T> extends StatelessWidget {
     return InputDecorator(
         decoration: InputDecoration(
           labelText: label,
-          border: OutlineInputBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          border: InputBorder.none,
+          contentPadding: EdgeInsets.zero,
         ),
         child: Neu(
           style: GlobalNeuSettings.neumorphicStyle.copyWith(
