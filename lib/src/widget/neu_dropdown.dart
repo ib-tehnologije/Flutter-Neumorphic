@@ -32,16 +32,19 @@ class NeuDropdown<T> extends StatelessWidget {
           style: GlobalNeuSettings.neumorphicStyle.copyWith(
             color: Colors.white,
           ),
-          child: DropdownButtonHideUnderline(
-            child: DropdownButton<T>(
-              padding: EdgeInsets.only(top: 5),
-              value: value,
-              borderRadius: BorderRadius.circular(10),
-              hint: value == null ? Text(placeholder) : null,
-              items: items,
-              isExpanded: true,
-              onChanged: onChanged, // Make sure to pass the onChanged callback
-              // Add any other DropdownButton customizations here
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<T>(
+                padding: EdgeInsets.only(top: 5),
+                value: value,
+                borderRadius: BorderRadius.circular(10),
+                hint: value == null ? Text(placeholder) : null,
+                items: items,
+                isExpanded: true,
+                onChanged: onChanged, // Make sure to pass the onChanged callback
+                // Add any other DropdownButton customizations here
+              ),
             ),
           ),
         ));
