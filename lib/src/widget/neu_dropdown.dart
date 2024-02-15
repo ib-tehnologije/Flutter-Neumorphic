@@ -26,57 +26,51 @@ class NeuDropdown<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return InputDecorator(
         decoration: InputDecoration(
-          // labelText: label,
+          labelText: label,
           border: InputBorder.none,
           contentPadding: EdgeInsets.zero,
           labelStyle: Theme.of(context).inputDecorationTheme.labelStyle,
-          label: label != null
-              ? Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 5),
-                  child: Text(
-                    label!,
-                    style: Theme.of(context).inputDecorationTheme.labelStyle,
-                  ),
-                )
-              : null,
         ),
-        child: Neu(
-          style: (neuStyle ?? GlobalNeuSettings.neumorphicStyle).copyWith(
-            color: Theme.of(context).backgroundColor,
-          ),
-          child: Padding(
-            padding: value == null
-                ? EdgeInsets.only(left: 10, right: 10)
-                : EdgeInsets.only(left: 10),
-            child: DropdownButtonHideUnderline(
-              child: DropdownButton<T>(
-                value: value,
-                borderRadius:
-                    BorderRadius.circular(GlobalNeuSettings.rectRadius),
-                hint: value == null
-                    ? Text(
-                        placeholder,
-                        style: Theme.of(context).inputDecorationTheme.hintStyle,
-                      )
-                    : null,
-                items: items,
-                isExpanded: true,
-                icon: value == null
-                    ? null
-                    : IconButton(
-                        padding: EdgeInsets.zero,
-                        icon: Icon(
-                          Icons.clear,
-                          color: Theme.of(context).colorScheme.error,
+        child: Padding(
+          padding: EdgeInsets.only(top: 5),
+          child: Neu(
+            style: (neuStyle ?? GlobalNeuSettings.neumorphicStyle).copyWith(
+              color: Theme.of(context).backgroundColor,
+            ),
+            child: Padding(
+              padding: value == null
+                  ? EdgeInsets.only(left: 10, right: 10)
+                  : EdgeInsets.only(left: 10),
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton<T>(
+                  value: value,
+                  borderRadius:
+                      BorderRadius.circular(GlobalNeuSettings.rectRadius),
+                  hint: value == null
+                      ? Text(
+                          placeholder,
+                          style: Theme.of(context).inputDecorationTheme.hintStyle,
+                        )
+                      : null,
+                  items: items,
+                  isExpanded: true,
+                  icon: value == null
+                      ? null
+                      : IconButton(
+                          padding: EdgeInsets.zero,
+                          icon: Icon(
+                            Icons.clear,
+                            color: Theme.of(context).colorScheme.error,
+                          ),
+                          onPressed: () {
+                            onChanged(null);
+                          },
+                          style: Theme.of(context).iconButtonTheme.style,
                         ),
-                        onPressed: () {
-                          onChanged(null);
-                        },
-                        style: Theme.of(context).iconButtonTheme.style,
-                      ),
-                onChanged:
-                    onChanged, // Make sure to pass the onChanged callback
-                // Add any other DropdownButton customizations here
+                  onChanged:
+                      onChanged, // Make sure to pass the onChanged callback
+                  // Add any other DropdownButton customizations here
+                ),
               ),
             ),
           ),
