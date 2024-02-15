@@ -8,6 +8,7 @@ class NeuDropdown<T> extends StatelessWidget {
   final T? value;
   final String placeholder;
   final String? label;
+  final NeuStyle? neuStyle;
 
   // Add any other properties you need
 
@@ -18,6 +19,7 @@ class NeuDropdown<T> extends StatelessWidget {
     this.label,
     this.placeholder = "Odaberite",
     this.value, // Add any other parameters for customization
+    this.neuStyle,
   }) : super(key: key);
 
   @override
@@ -27,18 +29,18 @@ class NeuDropdown<T> extends StatelessWidget {
           labelText: label,
           border: InputBorder.none,
           contentPadding: EdgeInsets.zero,
+          labelStyle: Theme.of(context).inputDecorationTheme.labelStyle,
         ),
         child: Neu(
-          style: GlobalNeuSettings.neumorphicStyle.copyWith(
+          style: (neuStyle ?? GlobalNeuSettings.neumorphicStyle).copyWith(
             color: Theme.of(context).backgroundColor,
           ),
           child: Padding(
             padding: value == null
-                ? EdgeInsets.only(left: 10, right: 10, top: 5)
+                ? EdgeInsets.only(left: 10, right: 10)
                 : EdgeInsets.only(left: 10),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<T>(
-                // padding: EdgeInsets.only(top: 5),
                 value: value,
                 borderRadius:
                     BorderRadius.circular(GlobalNeuSettings.rectRadius),
