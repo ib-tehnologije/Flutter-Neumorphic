@@ -29,7 +29,10 @@ class NeuDropdown<T> extends StatelessWidget {
           labelText: label,
           border: InputBorder.none,
           contentPadding: EdgeInsets.zero,
-          labelStyle: Theme.of(context).inputDecorationTheme.labelStyle,
+          labelStyle: Theme.of(context)
+              .dropdownMenuTheme
+              .inputDecorationTheme
+              ?.labelStyle,
         ),
         child: Padding(
           padding: EdgeInsets.only(top: 5),
@@ -49,10 +52,16 @@ class NeuDropdown<T> extends StatelessWidget {
                   hint: value == null
                       ? Text(
                           placeholder,
-                          style: Theme.of(context).inputDecorationTheme.hintStyle,
+                          style: Theme.of(context)
+                              .dropdownMenuTheme
+                              .inputDecorationTheme
+                              ?.hintStyle,
                         )
                       : null,
                   items: items,
+                  iconEnabledColor: Theme.of(context).colorScheme.primary,
+                  iconDisabledColor: Theme.of(context).colorScheme.primary,
+                  dropdownColor: Theme.of(context).backgroundColor,
                   isExpanded: true,
                   icon: value == null
                       ? null
