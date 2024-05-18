@@ -38,7 +38,7 @@ class NeuDropdown<T> extends StatelessWidget {
           padding: EdgeInsets.only(top: 5),
           child: Neu(
             style: (neuStyle ?? GlobalNeuSettings.neumorphicStyle).copyWith(
-              color: Theme.of(context).backgroundColor,
+              color: Theme.of(context).scaffoldBackgroundColor,
             ),
             child: Padding(
               padding: value == null
@@ -61,7 +61,7 @@ class NeuDropdown<T> extends StatelessWidget {
                   items: items,
                   iconEnabledColor: Theme.of(context).colorScheme.primary,
                   iconDisabledColor: Theme.of(context).colorScheme.primary,
-                  dropdownColor: Theme.of(context).backgroundColor,
+                  dropdownColor: Theme.of(context).scaffoldBackgroundColor,
                   isExpanded: true,
                   icon: value == null
                       ? null

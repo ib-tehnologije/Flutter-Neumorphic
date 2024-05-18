@@ -222,7 +222,7 @@ class NeuTextFormField extends FormField<String> {
                         style: Theme.of(field.context).textTheme.bodySmall),
                   Neu(
                     style: neumorphicStyle.copyWith(
-                      color: Theme.of(field.context).backgroundColor,
+                      color: Theme.of(field.context).scaffoldBackgroundColor,
                       borderRadius: rectRadius,
                       boxShape: NeuBoxShape.roundRect(
                           BorderRadius.circular(rectRadius)),

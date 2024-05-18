@@ -119,10 +119,10 @@ class NeuBigButton extends StatelessWidget {
                                         : color == Colors.white
                                             ? Theme.of(context)
                                                 .textTheme
-                                                .bodyText1
+                                                .bodyMedium
                                                 ?.color
                                             : Theme.of(context)
-                                                .backgroundColor),
+                                                .scaffoldBackgroundColor),
                           ),
                         )
                       : renderText(context),
@@ -149,15 +149,15 @@ class NeuBigButton extends StatelessWidget {
           (color != null && color != Colors.white
               ? Colors.white
               : color == Colors.white
-                  ? Theme.of(context).backgroundColor
-                  : Theme.of(context).textTheme.bodyText1?.color) ??
-          Theme.of(context).backgroundColor
+                  ? Theme.of(context).scaffoldBackgroundColor
+                  : Theme.of(context).textTheme.bodyMedium?.color) ??
+          Theme.of(context).scaffoldBackgroundColor
       : textColor ??
           (color != null && color != Colors.white
               ? Colors.white
               : color == Colors.white
-                  ? Theme.of(context).textTheme.bodyText1?.color
-                  : Theme.of(context).backgroundColor) ??
+                  ? Theme.of(context).textTheme.bodyMedium?.color
+                  : Theme.of(context).scaffoldBackgroundColor) ??
           Colors.white);
 
   Widget renderText(BuildContext context) {
